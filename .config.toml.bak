@@ -1,0 +1,35 @@
+[math]
+subject = 'Math'
+lehrer = 'John Andersen'
+email = 'JohnAndersen@fakemail.co'
+task = "Calculate some tasks"
+deadline = 'Dec 21'
+links = {'Task'='https://github.com/Du2s', 'Usefull link'='https://github.com/Du2s', 'Usefull link 2'='https://github.com/Du2s'}
+[eng]
+subject = 'English'
+lehrer = 'Perl Jam'
+email = '-'
+task = 'Two tests.'
+deadline = 'Jan 10'
+links = {'Tests'='https://github.com/Du2s'}
+[phil]
+subject = 'Philosophy'
+lehrer = 'Jack White'
+email = '-'
+task = 'Create text on theme'
+deadline = 'Jan 10'
+links = {'Themes list'='https://github.com/Du2s'}
+[rusg]
+subject = 'Society'
+lehrer = 'John Fedor'
+email = '-'
+task = 'Read paragraph'
+deadline = 'Dec 21'
+links = {}
+[hist]
+subject = 'History'
+lehrer = 'Khan Zamay'
+email = 'kz@fakemail.co'
+task = 'Read about French painters'
+deadline = 'Jan 25'
+links = {'Book'='https://github.com/Du2s'} 
