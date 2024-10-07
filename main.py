@@ -3,7 +3,7 @@ from telebot.util import quick_markup
 
 import tomllib
 
-from create_strings import email_list
+from create_strings import email_list, subject_dict
 
 with open(".secret.toml", "rb") as f:
     data = tomllib.load(f)
@@ -53,9 +53,9 @@ def submenus(message):
             reply_markup=markup,
             parse_mode='MarkdownV2')
     elif message.data == 'subjects':
-        markup = quick_markup({
-            'Back' : {'callback_data': 'back_main' },
-        }, row_width=1)
+        markup = quick_markup(
+            dict(subject_dict(),**{'Back' : {'callback_data': 'back_main' }, }),
+            row_width=1)
         bot.edit_message_text(
             chat_id=message.message.chat.id,
             message_id=message.message.message_id,

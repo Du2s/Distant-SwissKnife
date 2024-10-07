@@ -7,6 +7,13 @@ class Config_data():
     def get_subjets(self):
         for subj in self.data:
             yield self.data[subj]
+    
+    def get_subjects_list(self):
+        for subj in self.data:
+            yield subj
+    
+    def get_subject(self, subj):
+        return self.data[subj]
 
 if __name__ == '__main__':
     data = Config_data()

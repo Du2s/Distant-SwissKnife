@@ -9,5 +9,12 @@ def email_list():
             res += f"*{subj['subject']}*\n{subj['lehrer']}: `{subj['email']}`\n"
     return res
 
+def subject_dict():
+    res = dict()
+    for subj in data.get_subjects_list():
+        res[data.get_subject(subj)['subject']] = {'callback_data': subj}
+    return res
+
 if __name__ == '__main__':
     print(email_list())
+    print(subject_dict())
