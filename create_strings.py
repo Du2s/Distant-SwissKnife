@@ -31,11 +31,12 @@ def subject_info(subj):
                f"*Task:* {subject['task']}\n" \
                f"*Deadline:* {subject['deadline']}\n" \
                f"*Useful links:*\n"
+        res = res.replace('.', r'\.').replace('-', r'\-').replace('!', r'\!').replace('(', r'\(').replace(')', r'\)').replace('|', r'\|').replace('+', r'\+').replace('=', r'\=')
         for link in subject['links']:
             res += f"[{link}]({subject['links'][link]})\n"
     except IndexError:
         print("Wrong config")
-    res = res.replace('.', r'\.').replace('-', r'\-')
+    #res = res.replace('.', r'\.').replace('-', r'\-').replace('!', r'\!').replace('(', r'\(')
     return res
 
 if __name__ == '__main__':
